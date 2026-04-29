@@ -1,0 +1,197 @@
+{
+  "plants": [
+    {
+      "id": "1",
+      "name": "Money Plant",
+      "category": "indoor",
+      "price": 99,
+      "discount": 10,
+      "stock": 50,
+      "rating": 4.5,
+      "image": "money-plant.jpg",
+      "description": "Easy to grow, air purifying plant. Perfect for beginners."
+    },
+    {
+      "id": "2",
+      "name": "Snake Plant",
+      "category": "indoor",
+      "price": 149,
+      "discount": 0,
+      "stock": 30,
+      "rating": 4.7,
+      "image": "snake-plant.jpg",
+      "description": "Low maintenance plant that purifies air at night."
+    },
+    {
+      "id": "3",
+      "name": "Cactus",
+      "category": "indoor",
+      "price": 79,
+      "discount": 5,
+      "stock": 100,
+      "rating": 4.3,
+      "image": "cactus-plant.jpg",
+      "description": "Minimal water needed. Great for busy plant lovers."
+    },
+    {
+      "id": "4",
+      "name": "Rose",
+      "category": "outdoor",
+      "price": 199,
+      "discount": 15,
+      "stock": 40,
+      "rating": 4.8,
+      "image": "rose-plant.jpg",
+      "description": "Beautiful flowering plant for gardens and balconies."
+    },
+    {
+      "id": "5",
+      "name": "Jasmine",
+      "category": "outdoor",
+      "price": 129,
+      "discount": 0,
+      "stock": 25,
+      "rating": 4.6,
+      "image": "Jasmine-plant.jpg",
+      "description": "Fragrant flowers, perfect for Tamil Nadu climate."
+    },
+    {
+      "id": "6",
+      "name": "Bamboo",
+      "category": "outdoor",
+      "price": 249,
+      "discount": 20,
+      "stock": 20,
+      "rating": 4.4,
+      "image": "Bamboo-plant.jpg",
+      "description": "Fast growing, ideal for privacy screens and gardens."
+    },
+    {
+      "id": "7",
+      "name": "Aloe Vera",
+      "category": "decor",
+      "price": 179,
+      "discount": 10,
+      "stock": 35,
+      "rating": 4.5,
+      "image": "AloeVera-plant.jpg",
+      "description": "Elegant white flowers, perfect for home decor."
+    },
+    {
+      "id": "8",
+      "name": "Bonsai",
+      "category": "decor",
+      "price": 499,
+      "discount": 0,
+      "stock": 10,
+      "rating": 4.9,
+      "image": "Bonsai-plant.jpg",
+      "description": "Miniature tree, premium decorative plant for your home."
+    },
+    {
+      "id": "9",
+      "name": "Tulsi",
+      "category": "decor",
+      "price": 49,
+      "discount": 0,
+      "stock": 80,
+      "rating": 4.7,
+      "image": "Tulsi-plant.jpg",
+      "description": "Sacred and medicinal plant for every Indian home."
+    },
+    {
+      "id": "10",
+      "name": "Tulsi",
+      "category": "decor",
+      "price": 49,
+      "discount": 0,
+      "stock": 80,
+      "rating": 4.7,
+      "image": "Tulsi-plant.jpg",
+      "description": "Sacred and medicinal plant for every Indian home."
+    },
+    {
+      "id": "11",
+      "name": "Tulsi",
+      "category": "decor",
+      "price": 49,
+      "discount": 0,
+      "stock": 80,
+      "rating": 4.7,
+      "image": "Tulsi-plant.jpg",
+      "description": "Sacred and medicinal plant for every Indian home."
+    },
+    {
+      "id": "12",
+      "name": "Tulsi",
+      "category": "decor",
+      "price": 49,
+      "discount": 0,
+      "stock": 80,
+      "rating": 4.7,
+      "image": "Tulsi-plant.jpg",
+      "description": "Sacred and medicinal plant for every Indian home."
+    }
+  ],
+  "orders": [
+    {
+      "id": "Xgx-JWUeG4Q",
+      "name": "Snake Plant",
+      "category": "indoor",
+      "price": 149,
+      "discount": 0,
+      "stock": 30,
+      "rating": 4.7,
+      "image": "snake-plant.jpg",
+      "description": "Low maintenance plant that purifies air at night.",
+      "quantity": 1,
+      "total": 149,
+      "date": "2026-04-29T03:07:42.686Z"
+    },
+    {
+      "id": "ZlIxYX9Z-x8",
+      "name": "Money Plant",
+      "category": "indoor",
+      "price": 99,
+      "discount": 10,
+      "stock": 50,
+      "rating": 4.5,
+      "image": "money-plant.jpg",
+      "description": "Easy to grow, air purifying plant. Perfect for beginners.",
+      "quantity": 1,
+      "total": 99,
+      "address": {
+        "name": "aji",
+        "phone": "1234567898",
+        "street": "njo",
+        "city": "opd",
+        "pincode": "629502"
+      },
+      "status": "active",
+      "date": "2026-04-29T03:30:16.507Z"
+    },
+    {
+      "id": "k6MklyCAZBU",
+      "name": "Jasmine",
+      "category": "outdoor",
+      "price": 129,
+      "discount": 0,
+      "stock": 25,
+      "rating": 4.6,
+      "image": "Jasmine-plant.jpg",
+      "description": "Fragrant flowers, perfect for Tamil Nadu climate.",
+      "quantity": 1,
+      "total": 129,
+      "address": {
+        "name": "ajitha",
+        "phone": "8778589511",
+        "street": "nagercoil",
+        "city": "nagercoil",
+        "pincode": "629501"
+      },
+      "status": "active",
+      "date": "2026-04-29T07:29:53.772Z"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
