@@ -15,7 +15,7 @@ function Cart() {
     return (
       <Container className="my-4 text-center">
         <h4 className="cart-empty">Your cart is empty</h4>
-        <Button className="continue-btn mt-3" onClick={() => navigate('/')}>
+        <Button className="continue-btn mt-3" onClick={() => navigate('/checkout')}>
           Continue Shopping
         </Button>
       </Container>

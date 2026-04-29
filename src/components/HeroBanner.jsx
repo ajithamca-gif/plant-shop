@@ -22,7 +22,7 @@ function HeroBanner() {
               Handpicked indoor & outdoor plants delivered to your doorstep across Tamil Nadu.
             </p>
             <div className="d-flex gap-3">
-              <Button className="hero-btn-primary" size="lg">
+              <Button className="hero-btn-primary" size="lg" variant="outline-success">
                 Shop Now
               </Button>
               <Button className="hero-btn-outline" size="lg" variant="outline-success">

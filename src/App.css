@@ -1,4 +1,4 @@
-/* Navbarjsx */
+/* Navbar */
 .custom-navbar {
   background: #fff !important;
   border-bottom: 1px solid #e0e0e0;
@@ -8,9 +8,10 @@
 
 .navbar-brand-custom {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 900 !important;
   color: #2d5a3d !important;
   cursor: pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .nav-link-custom {
@@ -22,7 +23,6 @@
 
 .nav-link-custom:hover {
   color: #2d5a3d !important;
-  font-weight: 200;
 }
 
 .search-input {
@@ -38,8 +38,30 @@
   border-color: #2d5a3d !important;
 }
 
-/* Hero Banner */
+/* Mobile responsive */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    padding: 0.5rem 0 1rem;
+    border-top: 0.5px solid #e0e0e0;
+  }
 
+  .navbar-collapse .nav-link-custom {
+    padding: 0.65rem 0 !important;
+    border-bottom: 0.5px solid #f0f0f0;
+  }
+
+  .search-input {
+    width: 100% !important;
+    margin: 0.5rem 0;
+  }
+
+  .navbar-collapse .gap-2 {
+    flex-direction: row !important;
+    padding: 0.5rem 0;
+  }
+}
+
+/* Hero Banner */
 .hero-wrapper {
   background: #2d5a3d;
   min-height: 380px;
@@ -93,11 +115,17 @@
   font-size: 12px;
   margin: 4px 0 0;
 }
+
 .hero-btn-primary {
   background: #66bb6a;
-  color: #1b5e20;
+  color: #fbfbfb;
   border: none;
   font-weight: 500;
+}
+.hero-btn-primary:hover {
+  background: #4a8c5c;
+  color: #ffffff;
+  border-color: #4a8c5c;
 }
 
 .hero-btn-outline {
@@ -105,9 +133,8 @@
   color: #a5d6a7;
   border-color: #4a8c5c;
 }
-/* ............ */
 
-/* Product card */
+/* Product Card */
 .product-card {
   border: 0.5px solid #e0e0e0;
   border-radius: 12px;
@@ -194,9 +221,8 @@
   border-radius: 8px;
   font-size: 13px;
 }
-/* .............. */
 
-/* .....FilterSidebar.... */
+/* Filter Sidebar */
 .filter-sidebar {
   padding: 1rem;
   border-right: 1px solid #e0e0e0;
@@ -220,9 +246,8 @@
   color: #2d5a3d !important;
   font-weight: 500;
 }
-/* .......... */
 
-/* .....cartjsx..... */
+/* Cart */
 .cart-title {
   font-weight: 500;
   color: #2d5a3d;
@@ -315,7 +340,6 @@
   border-top: 2px solid #2d5a3d;
 }
 
-/* continue shopping */
 .continue-btn {
   background: transparent !important;
   border: 1px solid #2d5a3d !important;
@@ -323,42 +347,39 @@
   padding: 8px 20px;
   border-radius: 8px;
 }
-/* .................... */
 
-/* ........Register.jsx......  */
-.auth-container{
-  max-width:400px;
+/* Auth */
+.auth-container {
+  max-width: 400px;
   margin: 4rem auto;
   padding: 2rem;
   border: 0.5px solid #e0e0e0;
   border-radius: 12px;
 }
-.auth-title{
-  font-weight:500;
-  color: #2d5a3d;
-  margin-bottom:1.5rem;
 
+.auth-title {
+  font-weight: 500;
+  color: #2d5a3d;
+  margin-bottom: 1.5rem;
 }
 
-.auth-btn{
-  width:100%;
-  background: #2d5a3d!important;
+.auth-btn {
+  width: 100%;
+  background: #2d5a3d !important;
   color: #fff !important;
   padding: 10px;
   border-radius: 8px;
- 
 }
 
-.auth-link{
+.auth-link {
   text-align: center;
   margin-top: 1rem;
   color: #2d5a3d;
   cursor: pointer;
   font-size: 14px;
 }
-/* ................. */
 
-/* ...Footer.jsx.... */
+/* Footer */
 .footer {
   background: #2d5a3d;
   color: #f1f8e9;
@@ -424,28 +445,18 @@
   text-align: center;
   color: #a5d6a7;
   font-size: 13px;
-  margin: 0;
 }
-/* .............. */
 
-/* ........checkout.jsx...... */
-.checkout{
+/* Checkout */
+.checkout-card img {
   width: 100%;
-  height: 100%;
+  height: 250px;
   object-fit: contain;
   border-radius: 12px;
   border: 0.5px solid #e0e0e0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   margin-bottom: 1rem;
   padding: 8px;
-}
-
-.checkout-card img {
-  width: 100%;
-  height: 250px;
-  object-fit: contain;
-  border-radius: 8px;
-  margin-bottom: 1rem;
 }
 
 .checkout-card h3 {
@@ -522,10 +533,8 @@
   color: #c62828 !important;
   border: 1px solid #c62828 !important;
 }
-/* .................. */
 
-
-/* successjsx */
+/* Success */
 .success-container {
   display: flex;
   justify-content: center;
@@ -583,4 +592,28 @@
   border: 1px solid #2d5a3d !important;
   padding: 10px;
   border-radius: 8px;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    padding: 1rem 0;
+    border-top: 0.5px solid #e0e0e0;
+  }
+
+  .navbar-collapse .nav-link-custom {
+    padding: 0.6rem 0 !important;
+    border-bottom: 0.5px solid #f0f0f0;
+    text-align: left !important;
+  }
+
+  .navbar-collapse .search-input {
+    width: 100% !important;
+  }
+
+  .navbar-collapse .align-items-center {
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 20px !important;
+    padding: 0.5rem 0;
+  }
 }

@@ -36,7 +36,7 @@ function Footer() {
           <Col md={3} xs={12} className="mb-4">
             <h6 className="footer-heading">Contact Us</h6>
             <p className="footer-contact">📧 nammaoorplants@gmail.com</p>
-            <p className="footer-contact">📞 +91 xxxxxxxxxx</p>
+            <p className="footer-contact">📞 +91 9812345678</p>
             <p className="footer-contact">📍 Chennai, Tamil Nadu</p>
           </Col>
         </Row>

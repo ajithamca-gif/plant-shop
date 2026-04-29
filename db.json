@@ -109,28 +109,6 @@
       "rating": 4.7,
       "image": "Tulsi-plant.jpg",
       "description": "Sacred and medicinal plant for every Indian home."
-    },
-    {
-      "id": "11",
-      "name": "Tulsi",
-      "category": "decor",
-      "price": 49,
-      "discount": 0,
-      "stock": 80,
-      "rating": 4.7,
-      "image": "Tulsi-plant.jpg",
-      "description": "Sacred and medicinal plant for every Indian home."
-    },
-    {
-      "id": "12",
-      "name": "Tulsi",
-      "category": "decor",
-      "price": 49,
-      "discount": 0,
-      "stock": 80,
-      "rating": 4.7,
-      "image": "Tulsi-plant.jpg",
-      "description": "Sacred and medicinal plant for every Indian home."
     }
   ],
   "orders": [
