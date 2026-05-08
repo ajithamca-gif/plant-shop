@@ -23,9 +23,9 @@ function Success() {
         <Button className="success-btn" onClick={() => navigate("/")}>
           Go to Home
         </Button>
-        {/* <Button className="success-orders-btn" onClick={() => navigate("/orders")}>
+        <Button className="success-orders-btn" onClick={() => navigate("/orders")}>
           View Orders
-        </Button> */}
+        </Button>
       </div>
     </Container>
   );

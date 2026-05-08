@@ -1,50 +1,95 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { register } from '../redux/slices/authSlice';
-import { useNavigate } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import { useDispatch } from 'react-redux';
+import { register } from '../redux/slices/authSlice';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
-
-const Register = () => {
+function Register() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-  });
+  const [form, setForm] = useState({ name: '', email: '', password: '' });
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = () => {
-    dispatch(register(formData));
+  const handleRegister = () => {
+    if (!form.name || !form.email || !form.password) {
+      toast.error('All fields required!');
+      return;
+    }
+
+    // localStorage la save
+    localStorage.setItem('user', JSON.stringify(form));
+
+    dispatch(register({ name: form.name, email: form.email }));
+    toast.success(`Welcome, ${form.name}! 🌿`);
     navigate('/');
   };
 
   return (
-    <Container className="auth-container">
-      <h4 className="auth-title">Register</h4>
+    <Container style={{ maxWidth: '400px', marginTop: '60px' }}>
+      <h4 className="mb-4 text-center">Create Account</h4>
+
       <Form.Group className="mb-3">
         <Form.Label>Name</Form.Label>
-        <Form.Control type="text" name="name" value={formData.name} onChange={handleChange} required />
+        <Form.Control
+          type="text"
+          name="name"
+          placeholder="Enter your name"
+          value={form.name}
+          onChange={handleChange}
+        />
       </Form.Group>
+
       <Form.Group className="mb-3">
         <Form.Label>Email</Form.Label>
-        <Form.Control type="email" name="email" value={formData.email} onChange={handleChange} required />
+        <Form.Control
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          value={form.email}
+          onChange={handleChange}
+        />
       </Form.Group>
+
       <Form.Group className="mb-3">
         <Form.Label>Password</Form.Label>
-        <Form.Control type="password" name="password" value={formData.password} onChange={handleChange} required />
+        <Form.Control
+          type="password"
+          name="password"
+          placeholder="Enter your password"
+          value={form.password}
+          onChange={handleChange}
+        />
       </Form.Group>
-      <Button className="auth-btn" onClick={handleSubmit}>Register</Button>
-      <p className="auth-link" onClick={() => navigate('/login')}>Already have an account? Login</p>
+
+      <Button className="w-100 mt-2" variant="success" onClick={handleRegister}>
+        Register
+      </Button>
+
+      <p className="text-center mt-3">
+        Already have an account?{' '}
+        <span
+          style={{ color: 'green', cursor: 'pointer' }}
+          onClick={() => navigate('/login')}
+        >
+          Login
+        </span>
+      </p>
+      <Button 
+  variant="outline-success" 
+  className="mb-3" 
+  onClick={() => navigate('/')}
+>
+  ← Back to Home
+</Button>
     </Container>
   );
-};
+}
 
 export default Register;

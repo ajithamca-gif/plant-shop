@@ -2,12 +2,17 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { BsCart3, BsHeart } from 'react-icons/bs';
+import Button from 'react-bootstrap/Button';
+import { BsCart3, BsHeart, BsPerson } from 'react-icons/bs';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { setCategory, setSearchQuery } from '../redux/slices/filterSlice';
+import { logout } from '../redux/slices/authSlice';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import { useState } from 'react';
 
 function MyNavbar() {
+  const [expanded, setExpanded]=useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -21,21 +26,43 @@ function MyNavbar() {
 
   const handleFilter = (category) => {
     dispatch(setCategory(category));
+    setExpanded(false)
     navigate('/');
   };
 
   return (
-    <Navbar expand="lg" className="custom-navbar">
+    <Navbar expand="lg" className="custom-navbar" expanded={expanded} onToggle={setExpanded} >
       <Container className="px-4">
 
         {/* Logo */}
         <Navbar.Brand onClick={() => navigate('/')} className="navbar-brand-custom">
-          <span style={{ fontSize: "25px" }}>𝓷𓍼ོ</span>ammaOorPlants
+          nammaOoruPlants
         </Navbar.Brand>
 
-        {/* Mobile: icons + toggle — always visible */}
+        {/* Mobile: always visible */}
         <div className="d-flex align-items-center gap-2 d-lg-none">
-          <Nav.Link onClick={() => navigate('/wishlist')} className="position-relative p-1">
+
+          {/* Mobile auth */}
+          {isLoggedIn ? (
+            <Button variant="outline-success" size="sm" onClick={() => dispatch(logout())}>
+              Logout
+            </Button>
+          ) : (
+            <NavDropdown
+              title={<BsPerson size={20} color="#2d5a3d" />}
+              id="user-dropdown-mobile"
+              align="end"
+            >
+              <NavDropdown.Item onClick={() => {navigate('/register'); setExpanded(false);} }>
+                Register
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => {navigate('/login'); setExpanded(false);} }>
+                Login
+              </NavDropdown.Item>
+            </NavDropdown>
+          )}
+
+          <Nav.Link onClick={() => {navigate('/wishlist'); setExpanded(false);} } className="position-relative p-1">
             <BsHeart size={20} color="#2d5a3d" />
             {wishlistCount > 0 && (
               <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
@@ -43,7 +70,7 @@ function MyNavbar() {
               </span>
             )}
           </Nav.Link>
-          <Nav.Link onClick={() => navigate('/cart')} className="position-relative p-1">
+          <Nav.Link onClick={() => {navigate('/cart'); setExpanded(false);} } className="position-relative p-1">
             <BsCart3 size={20} color="#2d5a3d" />
             {cartCount > 0 && (
               <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -59,7 +86,7 @@ function MyNavbar() {
 
           {/* Nav links */}
           <Nav className="me-auto align-items-lg-center">
-            <Nav.Link onClick={() => handleFilter('all')} className="nav-link-custom">Home</Nav.Link>
+            <Nav.Link onClick={() => handleFilter('all')} className="nav-link-custom">All Plants</Nav.Link>
             <Nav.Link onClick={() => handleFilter('indoor')} className="nav-link-custom">Indoor Plants</Nav.Link>
             <Nav.Link onClick={() => handleFilter('outdoor')} className="nav-link-custom">Outdoor Plants</Nav.Link>
             <Nav.Link onClick={() => handleFilter('decor')} className="nav-link-custom">Home&amp;Garden Decor</Nav.Link>
@@ -78,16 +105,36 @@ function MyNavbar() {
             />
           </Form>
 
-          {/* Auth + icons (desktop icons here, mobile icons shown above) */}
+          {/* Desktop auth + icons */}
           <Nav className="align-items-lg-center gap-2">
             {isLoggedIn ? (
-              <Nav.Link className="nav-link-custom">Hi, {user.name}!</Nav.Link>
-            ) : (
               <>
-                <Nav.Link onClick={() => navigate('/login')} className="nav-link-custom">Login</Nav.Link>
-                <Nav.Link onClick={() => navigate('/register')} className="nav-link-custom">Register</Nav.Link>
+                <Nav.Link className="nav-link-custom">Hi, {user.name}!</Nav.Link>
+                <Button
+                  variant="outline-success"
+                  size="sm"
+                  onClick={() => dispatch(logout())}
+                >
+                  Logout
+                </Button>
               </>
+
+            ) : (
+              <NavDropdown
+                title={<BsPerson size={22} />}
+                id="user-dropdown"
+                align="end"
+                className="d-none d-lg-flex align-items-center"
+              >
+                <NavDropdown.Item onClick={() => navigate('/register')}>
+                  Register
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={() => navigate('/login')}>
+                  Login
+                </NavDropdown.Item>
+              </NavDropdown>
             )}
+
             {/* Desktop only icons */}
             <Nav.Link onClick={() => navigate('/wishlist')} className="position-relative d-none d-lg-block">
               <BsHeart size={20} />
@@ -111,6 +158,6 @@ function MyNavbar() {
       </Container>
     </Navbar>
   );
-} 
+}
 
 export default MyNavbar;

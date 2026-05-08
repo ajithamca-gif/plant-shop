@@ -12,7 +12,7 @@ function ProductGrid() {
 
   // 🔥 JSON Server fetch
   useEffect(() => {
-    fetch("http://localhost:5001/plants")
+    fetch("http://localhost:5000/plants")
       .then(res => res.json())
       .then(data => setPlants(data));
   }, []);

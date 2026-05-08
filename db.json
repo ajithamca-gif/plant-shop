@@ -98,17 +98,6 @@
       "rating": 4.7,
       "image": "Tulsi-plant.jpg",
       "description": "Sacred and medicinal plant for every Indian home."
-    },
-    {
-      "id": "10",
-      "name": "Tulsi",
-      "category": "decor",
-      "price": 49,
-      "discount": 0,
-      "stock": 80,
-      "rating": 4.7,
-      "image": "Tulsi-plant.jpg",
-      "description": "Sacred and medicinal plant for every Indian home."
     }
   ],
   "orders": [
@@ -169,6 +158,160 @@
       },
       "status": "active",
       "date": "2026-04-29T07:29:53.772Z"
+    },
+    {
+      "id": "5XvOG42TtdA",
+      "name": "Snake Plant",
+      "category": "indoor",
+      "price": 149,
+      "discount": 0,
+      "stock": 30,
+      "rating": 4.7,
+      "image": "snake-plant.jpg",
+      "description": "Low maintenance plant that purifies air at night.",
+      "quantity": 1,
+      "total": 149,
+      "address": {
+        "name": "asas",
+        "phone": "asa",
+        "street": "asas",
+        "city": "asa",
+        "pincode": "sasa"
+      },
+      "status": "active",
+      "date": "2026-05-06T01:31:25.579Z"
+    },
+    {
+      "id": "eRXtjCw5e_A",
+      "name": "Snake Plant",
+      "category": "indoor",
+      "price": 149,
+      "discount": 0,
+      "stock": 30,
+      "rating": 4.7,
+      "image": "snake-plant.jpg",
+      "description": "Low maintenance plant that purifies air at night.",
+      "quantity": 1,
+      "total": 149,
+      "address": {
+        "name": "asa",
+        "phone": "asa",
+        "street": "asa",
+        "city": "asas",
+        "pincode": "asa"
+      },
+      "status": "active",
+      "date": "2026-05-06T01:55:25.796Z"
+    },
+    {
+      "id": "OIOPCXfBQW4",
+      "name": "Money Plant",
+      "category": "indoor",
+      "price": 99,
+      "discount": 10,
+      "stock": 50,
+      "rating": 4.5,
+      "image": "money-plant.jpg",
+      "description": "Easy to grow, air purifying plant. Perfect for beginners.",
+      "quantity": 1,
+      "total": 99,
+      "address": {
+        "name": "ghgh",
+        "phone": "6567",
+        "street": "gh",
+        "city": "nnn",
+        "pincode": "777"
+      },
+      "status": "active",
+      "date": "2026-05-06T02:29:48.400Z"
+    },
+    {
+      "id": "8NfVUl8X0Ug",
+      "name": "Aloe Vera",
+      "category": "decor",
+      "price": 179,
+      "discount": 10,
+      "stock": 35,
+      "rating": 4.5,
+      "image": "AloeVera-plant.jpg",
+      "description": "Elegant white flowers, perfect for home decor.",
+      "quantity": 1,
+      "total": 179,
+      "address": {
+        "name": "ds",
+        "phone": "sad",
+        "street": "asds",
+        "city": "asd",
+        "pincode": "and"
+      },
+      "status": "active",
+      "date": "2026-05-06T09:05:57.966Z"
+    },
+    {
+      "id": "VAjC5ATJr24",
+      "name": "Snake Plant",
+      "category": "indoor",
+      "price": 149,
+      "discount": 0,
+      "stock": 30,
+      "rating": 4.7,
+      "image": "snake-plant.jpg",
+      "description": "Low maintenance plant that purifies air at night.",
+      "quantity": 2,
+      "total": 298,
+      "address": {
+        "name": "asa",
+        "phone": "sdd",
+        "street": "sad",
+        "city": "ds",
+        "pincode": "sds"
+      },
+      "status": "active",
+      "date": "2026-05-06T09:08:20.340Z"
+    },
+    {
+      "id": "_Cmyh3mPKqU",
+      "name": "Snake Plant",
+      "category": "indoor",
+      "price": 149,
+      "discount": 0,
+      "stock": 30,
+      "rating": 4.7,
+      "image": "snake-plant.jpg",
+      "description": "Low maintenance plant that purifies air at night.",
+      "quantity": 1,
+      "total": 149,
+      "address": {
+        "name": "hgff",
+        "phone": "89076",
+        "street": "gffh",
+        "city": "hgg",
+        "pincode": "Jef"
+      },
+      "status": "active",
+      "date": "2026-05-08T10:38:05.566Z"
+    },
+    {
+      "id": "fMSuXdOF2-U",
+      "name": "Money Plant",
+      "category": "indoor",
+      "price": 99,
+      "discount": 10,
+      "stock": 50,
+      "rating": 4.5,
+      "image": "money-plant.jpg",
+      "description": "Easy to grow, air purifying plant. Perfect for beginners.",
+      "quantity": 1,
+      "total": 99,
+      "address": {
+        "name": "anu",
+        "phone": "123",
+        "street": "asd",
+        "city": "asd",
+        "pincode": "123"
+      },
+      "status": "active",
+      "date": "2026-05-08T10:47:09.347Z"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

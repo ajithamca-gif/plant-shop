@@ -5,32 +5,39 @@ import { Routes, Route } from 'react-router-dom';
 import MyNavbar from './components/Navbar';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
-import Wishlist from './pages/Whishlist';
+import Wishlist from './pages/Wishlist';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Footer from './components/Footer';
 import Success from './pages/Success';
 import Checkout from './pages/Checkout';
+import Orders from './pages/Order';
+import { ToastContainer } from 'react-toastify';
 
 
 const App = () => {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      
+
       <MyNavbar />
       <div style={{ flex: 1 }}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path='/wishlist' element={<Wishlist/>}/>
-      <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path='/checkout' element={<Checkout/>}/>
-        <Route path="/success" element={<Success/>}/>
 
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path='/wishlist' element={<Wishlist/>}/>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+
+          <Route path='/checkout' element={<Checkout />} />
+          <Route path="/success" element={<Success />} />
+          <Route path='/orders' element={<Orders />} />
+
+        </Routes>
+        <ToastContainer position="top-center" autoClose={2000} /> {/* இது இருக்கா? */}
+
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

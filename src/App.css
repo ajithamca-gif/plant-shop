@@ -4,14 +4,18 @@
   border-bottom: 1px solid #e0e0e0;
   padding: 0.5rem 0;
   margin-bottom: 0 !important;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
+
 
 .navbar-brand-custom {
   font-size: 18px;
-  font-weight: 900 !important;
+  font-weight: bolder !important;
   color: #2d5a3d !important;
   cursor: pointer;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 .nav-link-custom {
@@ -615,5 +619,37 @@
     justify-content: flex-start !important;
     gap: 20px !important;
     padding: 0.5rem 0;
+  }
+}
+/* ..... */ wishlist 
+.insta-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #111;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  z-index: 999;
+
+  animation: slideFadeIn 0.4s ease, fadeOut 0.4s ease 2.1s forwards;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
   }
 }
