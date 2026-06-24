@@ -11,6 +11,12 @@ function Cart() {
 
   const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
+  // Button onClick la:
+const handleAddToCart = (item) => {
+  dispatch(addToCart(item));
+  toast.success(" Added to cart!");
+};
+
   if (cartItems.length === 0) {
     return (
       <Container className="my-4 text-center">
@@ -42,9 +48,7 @@ function Cart() {
           <Button className="cart-remove-btn" onClick={() => dispatch(removeFromCart(item.id))}>❌</Button>
         </div>
       ))}
-      <div className="cart-total">
-        <p>Total: ₹{total}</p>
-      </div>
+    
       <div className="cart-total">
         <p>Total: ₹{total}</p>
         <Button className="continue-btn" onClick={() => navigate('/')}>
