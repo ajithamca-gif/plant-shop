@@ -25,18 +25,30 @@ function Wishlist() {
     <Container className="my-4">
       <h4 className="cart-title">Your Wishlist</h4>
       {wishlistItems.map(item => (
-        <div key={item.id} className="cart-item">
-          <img src={`/src/assets/images/${item.image}`} className="cart-image" />
+        <div key={item.id} className="wishlist-card">
+          <img
+            src={`/images/${item.image}`}
+            alt={item.name}
+            className="cart-image"
+          />
           <div className="cart-details">
             <p className="cart-name">{item.name}</p>
             <p className="cart-price">₹{item.price}</p>
           </div>
-          <Button className="product-cart-btn me-2" onClick={() => dispatch(addToCart(item))}>
-            Add to Cart
-          </Button>
-          <Button className="cart-remove-btn" onClick={() => dispatch(removeFromWishlist(item.id))}>
-            ❌
-          </Button>
+          <div className="wishlist-actions">
+            <Button
+              className="wishlist-cart-btn"
+              onClick={() => dispatch(addToCart(item))}
+            >
+              Add to Cart
+            </Button>
+            <button
+              className="cart-remove-btn"
+              onClick={() => dispatch(removeFromWishlist(item.id))}
+            >
+              ❌
+            </button>
+          </div>
         </div>
       ))}
       <div className="mt-3">

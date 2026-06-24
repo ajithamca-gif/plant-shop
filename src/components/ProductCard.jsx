@@ -13,7 +13,7 @@ function ProductCard({ plant }) {
   return (
     <Card className="product-card">
       <div className="product-image-wrapper">
-        <Card.Img variant="top" src={`/src/assets/images/${plant.image}`} className="product-image" />
+        <Card.Img variant="top" src={`/images/${plant.image}`} className="product-image" />
         <Badge className="product-category-badge">{plant.category}</Badge>
         {plant.discount > 0 && (
           <Badge className="product-discount-badge">{plant.discount}% off</Badge>

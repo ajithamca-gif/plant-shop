@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import MyNavbar from './components/Navbar';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
-import Wishlist from './pages/Whishlist';
+import Wishlist from './pages/Wishlist';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Footer from './components/Footer';

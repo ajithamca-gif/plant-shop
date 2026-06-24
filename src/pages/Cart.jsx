@@ -28,7 +28,7 @@ function Cart() {
       <h4 className="cart-title">Your Cart</h4>
       {cartItems.map(item => (
         <div key={item.id} className="cart-item">
-          <img src={`/src/assets/images/${item.image}`} className="cart-image" />
+          <img src={`/images/${item.image}`} className="cart-image" />
           <div className="cart-details">
             <p className="cart-name">{item.name}</p>
             <p className="cart-price">₹{item.price}</p>

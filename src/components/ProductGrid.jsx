@@ -1,30 +1,21 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ProductCard from "./ProductCard";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useSelector } from "react-redux";
+import plantsData from "../data/db.json";
 
 function ProductGrid() {
-  const [plants, setPlants] = useState([]);
+  const [plants] = useState(plantsData.plants);
 
   const currentCategory = useSelector(state => state.filter.category);
   const searchQuery = useSelector(state => state.filter.searchQuery);
 
-  // 🔥 JSON Server fetch
-  useEffect(() => {
-    fetch("http://localhost:5001/plants")
-      .then(res => res.json())
-      .then(data => setPlants(data));
-  }, []);
-
-  // 🔍 filter logic (same as yours)
   const filteredPlants = plants.filter(p => {
     const matchCategory =
       currentCategory === "all" || p.category === currentCategory;
-
     const matchSearch =
       p.name.toLowerCase().includes(searchQuery.toLowerCase());
-
     return matchCategory && matchSearch;
   });
 

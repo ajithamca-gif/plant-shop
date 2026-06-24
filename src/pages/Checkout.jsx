@@ -10,7 +10,6 @@ function Checkout() {
   const navigate = useNavigate();
   const product = location.state;
   const [qty, setQty] = useState(1);
-
   const [address, setAddress] = useState({
     name: '',
     phone: '',
@@ -34,6 +33,7 @@ function Checkout() {
       alert("Please fill all address fields!");
       return;
     }
+
     const orderData = {
       ...product,
       quantity: qty,
@@ -42,6 +42,7 @@ function Checkout() {
       status: 'active',
       date: new Date().toISOString()
     };
+
     try {
       await axios.post("http://localhost:5001/orders", orderData);
       navigate("/orders");
@@ -52,11 +53,10 @@ function Checkout() {
 
   return (
     <Container className="my-4 checkout">
-      
       <Row className="g-4">
         <Col md={6}>
           <div className="checkout-card">
-            <img src={`/src/assets/images/${product.image}`} alt={product.name} />
+            <img src={`/images/${product.image}`} alt={product.name} />
             <h3>{product.name}</h3>
             <p>Price: ₹{product.price}</p>
             <input
@@ -76,10 +76,8 @@ function Checkout() {
             <input type="text" name="street" placeholder="Street Address" onChange={handleAddressChange} />
             <input type="text" name="city" placeholder="City" onChange={handleAddressChange} />
             <input type="text" name="pincode" placeholder="Pincode" onChange={handleAddressChange} />
-            
             <div className="checkout-btn-row">
               <button onClick={() => navigate('/success')}>Place Order</button>
-
               <button className="cancel-btn" onClick={() => navigate('/')}>Cancel</button>
             </div>
           </div>
